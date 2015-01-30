@@ -1,15 +1,12 @@
 
-# Computing GCD
+# Computing greatest common divisor using recursion
 
-def gcd(x, y):
-    if x > y:
-        smaller = y
+def gcd(i, j):
+    if min(i, j) == 0:
+        return max(i, j)
     else:
-        smaller = x
-    for d in range(1, smaller + 1):
-        if(x % d == 0) and (y % d == 0):
-            hcf = d
-    return hcf
+        return gcd(min(i, j), abs(i % j))
 
-print("The gcd of", 24, "and", 16, "is", gcd(24, 16))
-print("The gcd of", 255, "and", 25, "is", gcd(255, 25))
+print(gcd(24, 16))
+print(gcd(255, 25))
+
