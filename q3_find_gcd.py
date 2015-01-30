@@ -1,5 +1,5 @@
 
-# Computing the greatest common divisor
+# Computing GCD
 
 def gcd(x, y):
     if x > y:
@@ -11,6 +11,5 @@ def gcd(x, y):
             hcf = d
     return hcf
 
-num1 = int(input("Enter first number: "))
-num2 = int(input("Enter second number: "))
-print("The gcd of", num1, "and", num2, "is", gcd(num1, num2))
+print("The gcd of", 24, "and", 16, "is", gcd(24, 16))
+print("The gcd of", 255, "and", 25, "is", gcd(255, 25))
